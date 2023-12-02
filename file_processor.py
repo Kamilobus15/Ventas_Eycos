@@ -1,11 +1,17 @@
 import pandas as pd
 
+from normalizador import *
+
 
 # leer archivo 
-df = pd.read_excel('informe2023.xlsx', parse_dates=['Fecha'])
+df = pd.read_excel('infome_2023.xlsx', parse_dates=['Fecha'])
 
+#Cambiar formato de fecha
 df['Fecha'] = df['Fecha'].dt.strftime('%d-%m-%Y')
 
+#Normalizar comerciales
+
+df['Empleado_Vendedor'] = df['Empleado_Vendedor'].apply(estandarVendedor) 
 
 def custom_encoder(obj):
     if isinstance(obj, str):
@@ -24,7 +30,7 @@ df['Subtotal'] = -df['Subtotal']
 json_data = df.to_json(orient='records', force_ascii=False,  indent=4,  date_format='iso')
 
 # Save JSON to a file
-with open('anual2023_pruba.json', 'w', encoding='utf-8') as json_file:
+with open('informe_2023.json', 'w', encoding='utf-8') as json_file:
     json_file.write(json_data)
 
 # Print JSON to the console
