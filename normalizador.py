@@ -8,11 +8,14 @@ comercialesFinal = {
     'Mostrador Jader Martinez ': Comerciales.JADER,
     'Mostrador Medellín ': Comerciales.MEDELLIN,
     'Mostrador Mariana Bustos ': Comerciales.MARIANA,
-    'YEBELIS PAOLA CHARRIS MEZA ': Comerciales.BARRAQUILLA,
+    'YEBELIS PAOLA CHARRIS MEZA': Comerciales.BARRAQUILLA,
     'Mostrador STEFANY ': Comerciales.OTROS,
     'Mostrador Jorge Espitia ': Comerciales.OTROS,
     'Mostrador Alejandra Ibague ': Comerciales.OTROS,
-    'Mostrador Juan Carlos ': Comerciales.BARRAQUILLA
+    'Mostrador Juan Carlos ': Comerciales.BARRAQUILLA,
+    'JOHN NELSON BUSTOS BUSTOS': Comerciales.JUDITH,
+    'JHONATAN POTTES SILVA': Comerciales.OTROS,
+    'JOSE LUIS BARROS RICCIOLLI': Comerciales.BARRAQUILLA
 }
 
 def estandarVendedor(vendedor):

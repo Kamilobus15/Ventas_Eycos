@@ -8,3 +8,4 @@ class Comerciales:
     OTROS = 'Otros'
     MEDELLIN = 'COMERCIALES MEDELLIN'
     BARRAQUILLA = 'COMERCIALES BARRAQUILLA'
+
