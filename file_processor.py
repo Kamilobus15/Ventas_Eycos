@@ -1,5 +1,6 @@
 import pandas as pd
-
+import json
+from datetime import datetime
 from normalizador import *
 
 
@@ -7,7 +8,10 @@ from normalizador import *
 df = pd.read_excel('infome_2023.xlsx', parse_dates=['Fecha'])
 
 #Cambiar formato de fecha
-df['Fecha'] = df['Fecha'].dt.strftime('%d-%m-%Y')
+df['Fecha'] = pd.to_datetime(df['Fecha'], format='%d-%m-%Y')
+
+df['Fecha'] = df['Fecha'].dt.strftime('%Y-%m-%d')
+
 
 #Normalizar comerciales
 
@@ -33,5 +37,5 @@ json_data = df.to_json(orient='records', force_ascii=False,  indent=4,  date_for
 with open('informe_2023.json', 'w', encoding='utf-8') as json_file:
     json_file.write(json_data)
 
-# Print JSON to the console
-print(len(json_data))
+
+ 
